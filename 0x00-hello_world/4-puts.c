@@ -1,7 +1,8 @@
 #include <stdio.h>
-/*
- * main A programe that print puts functions
- * return 0 mean Success
+/**
+ * main - Entry point where i create The puts Function
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
