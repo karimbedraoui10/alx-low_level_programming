@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_square - print lines
+ * print_triangle - print lines
  *
  * @n: number of diagonals
  */
 
-void print_square(int n)
+void print_triangle(int n)
 {
 	int m, d;
 
