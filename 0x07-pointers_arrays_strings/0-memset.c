@@ -2,7 +2,7 @@
 /**
  * _memset - function to set in memorie an other value
  *
- * @s: value to change
+ * @str: value to change
  *
  * @b: value to set
  *
@@ -10,15 +10,15 @@
  *
  * Return: retune new value s;
  */
-char *_memset(char *s, char b, unsigned int n)
+char *_memset(char *str, char b, unsigned int n)
 {
-	char *ptr = s;
-	int i;
+	char *ptr = str;
 
-	for (i = 0; i < n; i++)
+	while (n > 0)
 	{
-		*s = b;
-		*s++;
+		*str = b;
+		str++;
+		n--;
 	}
 
 	return (ptr);
