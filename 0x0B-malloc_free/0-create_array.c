@@ -7,10 +7,10 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char *ptr = malloc(size);
+	char *ptr = malloc(size * sizeof(char));
 
 	if (size == 0 || size == 0)
-		return (0);
+		return (NULL);
 	while (size--)
 		ptr[size] = c;
 	return (ptr);
