@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * add_node_end - adds a node to the end of the list
- @head: address of pointer to head node
+ * @head: address of pointer to head node
  * @str: str field of node
  * Return: size of list
  */
@@ -31,4 +31,4 @@ list_t *add_node_end(list_t **head, const char *str)
 	else
 		*head = new_node;
 	return (new_node);
-}
+!}
