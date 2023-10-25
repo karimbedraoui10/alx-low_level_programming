@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * *add_nodeint_end - function
- * @listint_t: input
+ * @head: input
  * @n: input
  * Return: new_node
  */
