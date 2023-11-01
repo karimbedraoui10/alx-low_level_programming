@@ -7,15 +7,23 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	FILE *file;
+	int file;
+	int rwr;
+	int n;
 
-	if (filename == NULL || text_content == NULL)
+	if (!filename)
 		return (-1);
-	file = fopen(filename, "a");
-	if (file == NULL)
+	file = open(filename, O_WRONLY | O_APPEND);
+	if (file == -1)
 		return (-1);
-	fprintf(file, "%s", text_content);
-
-	fclose(file);
+	if (text_content)
+	{
+		for (n = 0; text_content[n]; n++)
+			;
+		rwr = write(file, text_content, n);
+		if (rwr == -1)
+			return (-1);
+	}
+	close(file);
 	return (1);
 }
